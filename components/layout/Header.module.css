@@ -1,0 +1,30 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid #1e293b;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+}
+
+.container {
+    max-width: 1280px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.logo span {
+    color: #3b82f6;
+}

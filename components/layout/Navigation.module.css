@@ -1,0 +1,27 @@
+.navigation {
+    display: flex;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+.link {
+    color: #cbd5e1;
+    font-size: 15px;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: #3b82f6;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+    }
+}

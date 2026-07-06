@@ -51,10 +51,10 @@ export default function Hero() {
     name: "Serhii Yemets",
     role: "Full Stack Developer",
     location: "Czech Republic",
-    stack: [
-    ${stack.map((item) => `    "${item}"`).join(",\n")}
+    stack: [ 
+    ${stack.map((item) => `      "${item}"`).join(",\n")}
     ],
-    focus: "Production-ready web apps"
+        focus: "Production-ready web apps"
     };`}</code>
             </pre>
             </div>

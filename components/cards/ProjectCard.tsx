@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Project } from "@/types/project";
 import styles from "./ProjectCard.module.css";
+import Image from "next/image";
 
 interface ProjectCardProps {
     project: Project;
@@ -10,7 +11,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     return (
         <article className={styles.card}>
             <div className={styles.image}>
-                <span>Project Preview</span>
+                <Image
+                    src={project.images[0]}
+                    alt={project.title}
+                    fill
+                    className={styles.projectImage}
+                />
             </div>
 
             <div className={styles.content}>

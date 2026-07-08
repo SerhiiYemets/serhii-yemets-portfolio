@@ -1,26 +1,35 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import { navigation } from "@/constants/navigation";
+
 import styles from "./Navigation.module.css";
 
-const links = [
-    { label: "About me", href: "/about"},
-    { label: "Commercial", href: "/commercial-projects" },
-    { label: "Team", href: "./team-projects"},
-    { label: "Pet", href: "./pet-projects"},
-    { label: "Contact", href: "./contact"},
-];
-
 export default function Navigation() {
+    const pathname = usePathname();
+
     return (
         <nav className={styles.navigation}>
-            <ul className={styles.list}>
-                {links.map((link) => (
-                    <li key={link.href}>
-                        <Link href={link.href} className={styles.link}>
-                            {link.label}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+        <ul className={styles.list}>
+            {navigation.map(({ title, href }) => {
+            const isActive = pathname === href;
+
+            return (
+                <li key={href}>
+                <Link
+                    href={href}
+                    className={`${styles.link} ${
+                    isActive ? styles.active : ""
+                    }`}
+                >
+                    {title}
+                </Link>
+                </li>
+            );
+            })}
+        </ul>
         </nav>
     );
 }

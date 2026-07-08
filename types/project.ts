@@ -17,6 +17,8 @@ export interface Project {
 
     technologies: string[];
 
+    contribution: string[];
+
     responsibilities: string[];
 
     challenges?: string[];

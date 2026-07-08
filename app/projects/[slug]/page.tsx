@@ -54,6 +54,16 @@ export default async function ProjectPage({
                     </div>
                     </div>
 
+                    <div className={styles.block}>
+                        <h2>My Contribution</h2>
+
+                        <div className={styles.tags}>
+                            {project.contribution.map((item) => (
+                            <span key={item}>{item}</span>
+                            ))}
+                        </div>
+                    </div>
+
                     <div className={styles.links}>
                     {project.github && (
                         <a
@@ -101,6 +111,20 @@ export default async function ProjectPage({
                     {project.challenges && project.challenges.length > 0 && (
                     <div className={styles.block}>
                         <h2>Challenges</h2>
+
+                        {project.images.length > 0 && (
+                            <div className={styles.block}>
+                                <h2>Project Gallery</h2>
+
+                                <div className={styles.gallery}>
+                                {project.images.map((image) => (
+                                    <div key={image} className={styles.galleryItem}>
+                                    <img src={image} alt={project.title} />
+                                    </div>
+                                ))}
+                                </div>
+                            </div>
+                            )}
 
                         <ul>
                         {project.challenges.map((item) => (

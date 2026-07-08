@@ -11,13 +11,43 @@
 }
 
 .link {
+    position: relative;
+
     color: #cbd5e1;
-    font-size: 15px;
-    transition: color 0.2s ease;
+
+    transition: color 0.25s ease;
+}
+
+.link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0;
+    height: 2px;
+
+    background: #3b82f6;
+
+    transition: width 0.25s ease;
 }
 
 .link:hover {
+    color: #ffffff;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+.active {
     color: #3b82f6;
+}
+
+.active::after {
+    width: 100%;
 }
 
 @media (max-width: 768px) {

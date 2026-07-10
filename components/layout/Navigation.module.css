@@ -6,48 +6,55 @@
 .list {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 4px;
     list-style: none;
 }
 
 .link {
     position: relative;
 
-    color: #cbd5e1;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
 
-    transition: color 0.25s ease;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    border-radius: var(--radius-md);
+
+    transition:
+        color var(--transition),
+        background var(--transition);
+}
+
+.link:hover {
+    color: var(--color-text);
+    background: rgba(148, 163, 184, 0.08);
 }
 
 .link::after {
     content: "";
 
     position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 2px;
 
-    left: 0;
-    bottom: -6px;
-
-    width: 0;
     height: 2px;
+    border-radius: var(--radius-full);
+    background: var(--color-accent);
 
-    background: #3b82f6;
-
-    transition: width 0.25s ease;
-}
-
-.link:hover {
-    color: #ffffff;
-}
-
-.link:hover::after {
-    width: 100%;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--transition);
 }
 
 .active {
-    color: #3b82f6;
+    color: var(--color-text);
 }
 
 .active::after {
-    width: 100%;
+    transform: scaleX(1);
 }
 
 @media (max-width: 768px) {

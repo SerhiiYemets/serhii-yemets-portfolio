@@ -1,0 +1,197 @@
+.page {
+    padding: clamp(72px, 9vw, 72px) 0 clamp(72px, 10vw, 112px);
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    max-width: 680px;
+    margin-bottom: 48px;
+}
+
+.eyebrow {
+    margin-bottom: 16px;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+}
+
+.title {
+    margin-bottom: 22px;
+    color: var(--color-text);
+    font-size: clamp(34px, 5.5vw, 54px);
+    line-height: 1.06;
+    letter-spacing: -0.04em;
+}
+
+.lede {
+    color: var(--color-text-secondary);
+    font-size: clamp(18px, 2.4vw, 21px);
+    line-height: 1.65;
+}
+
+.emailCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    margin-bottom: 20px;
+    padding: 28px;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(
+            120% 160% at 0% 0%,
+            rgba(59, 130, 246, 0.12),
+            transparent 55%
+        ),
+        var(--color-card);
+}
+
+.emailLabel {
+    margin-bottom: 8px;
+    color: var(--color-text-tertiary);
+    font-size: 14px;
+}
+
+.emailValue {
+    color: var(--color-text);
+    font-size: clamp(18px, 3vw, 24px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+
+    transition: color var(--transition);
+}
+
+.emailValue:hover {
+    color: var(--color-accent);
+}
+
+.emailButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+
+    height: 48px;
+    padding: 0 22px;
+
+    border-radius: var(--radius-md);
+    background: var(--color-accent);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: var(--shadow-accent);
+
+    transition:
+        background var(--transition),
+        transform var(--transition);
+}
+
+.emailButton:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-2px);
+}
+
+.channels {
+    display: grid;
+    gap: 14px;
+}
+
+.channelWrap {
+    display: grid;
+}
+
+.channel {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 20px 24px;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-card);
+
+    transition:
+        border-color var(--transition),
+        background var(--transition),
+        transform var(--transition);
+}
+
+.channel:hover {
+    border-color: var(--color-border-hover);
+    background: var(--color-card-hover);
+    transform: translateY(-2px);
+}
+
+.channelIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-bg-subtle);
+    color: var(--color-text);
+}
+
+.channelText {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.channelLabel {
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.channelValue {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.channelArrow {
+    margin-left: auto;
+    flex-shrink: 0;
+    color: var(--color-text-tertiary);
+    transition:
+        transform var(--transition),
+        color var(--transition);
+}
+
+.channel:hover .channelArrow {
+    color: var(--color-accent);
+    transform: translate(2px, -2px);
+}
+
+@media (max-width: 560px) {
+    .emailCard {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .emailButton {
+        width: 100%;
+        justify-content: center;
+    }
+}

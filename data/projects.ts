@@ -15,7 +15,7 @@ export const projects: Project[] = [
         "Commercial food delivery platform for restaurants in the Czech Republic.",
 
         fullDescription:
-        "A production-ready food delivery platform where I participate in frontend and backend development, API design, PostgreSQL database management, Docker deployment, and production support.",
+        "SushiMax.cz is a production-ready food delivery platform developed for a restaurant in the Czech Republic. The project is actively used by real customers and supports online ordering, delivery management, menu synchronization, and restaurant operations. The application consists of a Next.js frontend and a Node.js backend deployed on a self-managed VPS infrastructure.",
 
         role: "Full Stack Developer",
 
@@ -41,6 +41,47 @@ export const projects: Project[] = [
         "Integrate external services",
         "Support production environment",
         "Optimize performance",
+        ],
+
+        businessChallenges: [
+            "Worked directly with two restaurant owners with different business requirements.",
+            "Collected and clarified project requirements.",
+            "Found compromises between business expectations and technical implementation.",
+            "Designed the application architecture from scratch."
+        ],
+
+        solutions: [
+            "Integrated Poster POS API.",
+            "Implemented webhook synchronization.",
+            "Built online ordering workflow.",
+            "Developed delivery zones and delivery cost calculation.",
+            "Implemented email notifications.",
+            "Configured production deployment.",
+        ],
+
+        infrastructure: [
+            "Hetzner Cloud VPS",
+            "Ubuntu Linux",
+            "Nginx",
+            "PM2",
+            "Let's Encrypt",
+            "MongoDB",
+            "DNS Configuration",
+        ],
+
+        achievements: [
+            "Successfully launched the platform into production.",
+            "Website is used by real customers.",
+            "Restaurant owners actively use the administration panel.",
+            "Delivered a complete commercial solution from idea to deployment.",
+        ],
+
+        lessonsLearned: [
+            "Working with real clients.",
+            "Gathering business requirements.",
+            "Designing production-ready architecture.",
+            "Deploying and maintaining Linux servers.",
+            "Supporting a live production application.",
         ],
 
         challenges: [
@@ -294,7 +335,7 @@ export const projects: Project[] = [
 
         category: "team",
 
-        featured: false,
+        featured: true,
 
         shortDescription:
             "A responsive landing page for a yoga studio with pricing plans, interactive modal windows and smooth navigation.",

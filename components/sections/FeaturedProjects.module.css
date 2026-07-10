@@ -1,43 +1,49 @@
 .section {
-    padding: 100px 0;
+    padding: clamp(72px, 10vw, 72px) 0;
+    border-top: 1px solid var(--color-border);
 }
 
 .container {
-    max-width: 1280px;
+    max-width: var(--container);
     margin: 0 auto;
     padding: 0 24px;
 }
 
 .header {
-    max-width: 700px;
-    margin-bottom: 60px;
+    max-width: 640px;
+    margin-bottom: 56px;
 }
 
 .subtitle {
-    color: #60a5fa;
+    margin-bottom: 14px;
+    color: var(--color-accent);
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0.08em;
-    margin-bottom: 12px;
 }
 
 .title {
-    font-size: 48px;
-    color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+    color: var(--color-text);
+    font-size: clamp(30px, 5vw, 46px);
+    line-height: 1.1;
 }
 
 .description {
-    color: #94a3b8;
-    line-height: 1.8;
+    color: var(--color-text-secondary);
+    line-height: 1.65;
     font-size: 18px;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    gap: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 24px;
+}
+
+.cardWrap {
+    display: grid;
 }
 
 .actions {
@@ -47,15 +53,41 @@
 }
 
 .button {
-    padding: 14px 28px;
-    border: 1px solid #3b82f6;
-    border-radius: 999px;
-    color: #3b82f6;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    height: 48px;
+    padding: 0 24px;
+
+    border: 1px solid var(--color-border-hover);
+    border-radius: var(--radius-md);
+    background: var(--color-card);
+    color: var(--color-text);
+    font-size: 15px;
     font-weight: 600;
-    transition: 0.3s;
+
+    transition:
+        border-color var(--transition),
+        background var(--transition),
+        transform var(--transition);
+}
+
+.button svg {
+    transition: transform var(--transition);
 }
 
 .button:hover {
-    background: #3b82f6;
-    color: white;
+    border-color: var(--color-accent-border);
+    transform: translateY(-2px);
+}
+
+.button:hover svg {
+    transform: translateX(3px);
+}
+
+@media (max-width: 560px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }

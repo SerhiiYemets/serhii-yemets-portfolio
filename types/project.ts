@@ -21,6 +21,16 @@ export interface Project {
 
     responsibilities: string[];
 
+    businessChallenges?: string[];
+
+    solutions?: string[];
+
+    achievements?: string[];
+
+    infrastructure?: string[];
+
+    lessonsLearned?: string[];
+
     challenges?: string[];
 
     github?: string;

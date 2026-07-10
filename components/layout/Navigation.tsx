@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 import { navigation } from "@/constants/navigation";
 
@@ -12,24 +13,19 @@ export default function Navigation() {
 
     return (
         <nav className={styles.navigation}>
-        <ul className={styles.list}>
-            {navigation.map(({ title, href }) => {
-            const isActive = pathname === href;
-
-            return (
-                <li key={href}>
-                <Link
-                    href={href}
-                    className={`${styles.link} ${
-                    isActive ? styles.active : ""
-                    }`}
-                >
-                    {title}
-                </Link>
-                </li>
-            );
-            })}
-        </ul>
+            <ul className={styles.list}>
+                {navigation.map(({ title, href }) => (
+                    <li key={href}>
+                        <Link
+                            href={href}
+                            className={clsx(styles.link, pathname === href && styles.active)}
+                            aria-current={pathname === href ? "page" : undefined}
+                        >
+                            {title}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
         </nav>
     );
 }

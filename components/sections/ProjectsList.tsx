@@ -1,5 +1,6 @@
 import { Project } from "@/types/project";
 import ProjectCard from "@/components/cards/ProjectCard";
+import Reveal from "@/components/ui/Reveal";
 import styles from "./ProjectsList.module.css";
 
 interface ProjectsListProps {
@@ -16,20 +17,31 @@ export default function ProjectsList({
     return (
         <section className={styles.section}>
             <div className={styles.container}>
-                <header className={styles.header}>
-                <h1 className={styles.title}>{title}</h1>
+                <Reveal className={styles.header}>
+                    <p className={styles.eyebrow}>Portfolio</p>
 
-                <p className={styles.description}>{description}</p>
-                </header>
+                    <h1 className={styles.title}>{title}</h1>
 
-                <div className={styles.grid}>
-                {projects.map((project) => (
-                    <ProjectCard
-                    key={project.id}
-                    project={project}
-                    />
-                ))}
-                </div>
+                    <p className={styles.description}>{description}</p>
+                </Reveal>
+
+                {projects.length > 0 ? (
+                    <div className={styles.grid}>
+                        {projects.map((project, index) => (
+                            <Reveal
+                                key={project.id}
+                                className={styles.cardWrap}
+                                delay={(index % 3) * 0.08}
+                            >
+                                <ProjectCard project={project} />
+                            </Reveal>
+                        ))}
+                    </div>
+                ) : (
+                    <p className={styles.empty}>
+                        Projects in this category are coming soon.
+                    </p>
+                )}
             </div>
         </section>
     );

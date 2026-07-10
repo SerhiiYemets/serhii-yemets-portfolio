@@ -6,10 +6,10 @@ import About from "@/components/sections/About";
 export default function Home() {
   return (
     <>
-      <Hero />;
+      <Hero />
       <TechStack />
       <FeaturedProjects />
       <About />
     </>
-  )
+  );
 }

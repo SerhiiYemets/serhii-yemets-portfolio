@@ -1,56 +1,79 @@
 import Link from "next/link";
+import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
+
 import { Project } from "@/types/project";
 import styles from "./ProjectCard.module.css";
-import Image from "next/image";
 
 interface ProjectCardProps {
     project: Project;
 }
 
+const categoryLabels: Record<Project["category"], string> = {
+    commercial: "Commercial",
+    team: "Team",
+    pet: "Pet Project",
+};
+
 export default function ProjectCard({ project }: ProjectCardProps) {
     return (
-        <article className={styles.card}>
-            <div className={styles.image}>
+        <Link
+            href={`/projects/${project.slug}`}
+            className={styles.card}
+            aria-label={`View project: ${project.title}`}
+        >
+            <div className={styles.imageWrap}>
                 <Image
                     src={project.images[0]}
                     alt={project.title}
                     fill
-                    className={styles.projectImage}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+                    className={styles.image}
                 />
-            </div>
 
-            <div className={styles.content}>
-                <div className={styles.top}>
-                    <span className={styles.category}>{project.category}</span>
+                <div className={styles.badges}>
+                    <span className={styles.category}>
+                        {categoryLabels[project.category]}
+                    </span>
 
                     {project.featured && (
                         <span className={styles.featured}>Featured</span>
                     )}
-                    </div>
-
-                    <h3 className={styles.title}>{project.title}</h3>
-
-                    <p className={styles.description}>
-                    {project.shortDescription}
-                    </p>
-
-                    <div className={styles.tech}>
-                    {project.technologies.slice(0, 4).map((tech) => (
-                        <span key={tech} className={styles.tag}>
-                        {tech}
-                        </span>
-                    ))}
-                    </div>
-
-                    <div className={styles.footer}>
-                    <Link
-                        href={`/projects/${project.slug}`}
-                        className={styles.button}
-                    >
-                        View Project →
-                    </Link>
                 </div>
             </div>
-        </article>
+
+            <div className={styles.content}>
+                <div className={styles.meta}>
+                    <span className={styles.role}>{project.role}</span>
+
+                    {project.duration && (
+                        <span className={styles.duration}>{project.duration}</span>
+                    )}
+                </div>
+
+                <h3 className={styles.title}>{project.title}</h3>
+
+                <p className={styles.description}>{project.shortDescription}</p>
+
+                <div className={styles.tech}>
+                    {project.technologies.slice(0, 4).map((tech) => (
+                        <span key={tech} className={styles.tag}>
+                            {tech}
+                        </span>
+                    ))}
+
+                    {project.technologies.length > 4 && (
+                        <span className={styles.tagMore}>
+                            +{project.technologies.length - 4}
+                        </span>
+                    )}
+                </div>
+
+                <span className={styles.cta}>
+                    View Project
+                    <ArrowUpRight size={17} />
+                </span>
+            </div>
+        </Link>
     );
 }

@@ -90,9 +90,9 @@ export const projects: Project[] = [
         "Infrastructure migration",
         ],
 
-        github: "",
+        github: "https://github.com/SerhiiYemets/sushi-blended-express-frontend",
 
-        demo: "",
+        demo: "https://sushimax.cz/",
 
         images: ["/images/projects/food-delivery.webp"],
     },

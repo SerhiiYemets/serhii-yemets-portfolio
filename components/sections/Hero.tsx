@@ -7,9 +7,12 @@ import { ArrowRight, Download, Mail } from "lucide-react";
 import styles from "./Hero.module.css";
 
 const stack = [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "TypeScript",
     "Next.js",
     "React",
-    "TypeScript",
     "Node.js",
     "Express",
     "PostgreSQL",
@@ -72,15 +75,15 @@ export default function Hero() {
                     </motion.p>
 
                     <motion.div className={styles.actions} variants={item}>
-                        <Link href="/commercial-projects" className={styles.primaryButton}>
+                        <Link href="/team-projects" className={styles.primaryButton}>
                             View Projects
                             <ArrowRight size={18} />
                         </Link>
 
-                        <a href="/cv.pdf" download className={styles.secondaryButton}>
+                        {/* <a href="/cv.pdf" download className={styles.secondaryButton}>
                             <Download size={18} />
                             Download CV
-                        </a>
+                        </a> */}
 
                         <Link href="/contact" className={styles.ghostButton}>
                             <Mail size={18} />

@@ -114,8 +114,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                         src={project.images[0]}
                         alt={project.title}
                         fill
-                        priority
-                        sizes="(max-width: 1000px) 100vw, 1000px"
+                        preload
+                        quality={90}
+                        sizes="(max-width: 1080px) 100vw, 1040px"
                         className={styles.heroImage}
                     />
                 </Reveal>
@@ -315,7 +316,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                                         src={image}
                                         alt={project.title}
                                         fill
-                                        sizes="(max-width: 1000px) 100vw, 1000px"
+                                        quality={90}
+                                        sizes="(max-width: 1080px) 100vw, 1040px"
                                         className={styles.galleryImage}
                                     />
                                 </div>

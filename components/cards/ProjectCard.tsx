@@ -27,7 +27,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                     src={project.images[0]}
                     alt={project.title}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+                    quality={90}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 384px"
                     className={styles.image}
                 />
 

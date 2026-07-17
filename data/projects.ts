@@ -94,7 +94,7 @@ export const projects: Project[] = [
 
         demo: "https://sushimax.cz/",
 
-        images: ["/images/projects/food-delivery.webp"],
+        images: ["/images/projects/food-delivery.png"],
     },
 
     {
@@ -174,7 +174,7 @@ export const projects: Project[] = [
             "https://relax-map-group-02.vercel.app/",
 
         images: [
-            "/images/projects/relax-map.webp",
+            "/images/projects/relax-map.png",
         ],
     },
         {
@@ -245,7 +245,7 @@ export const projects: Project[] = [
             "https://camper-booking-platform.vercel.app/",
 
         images: [
-            "/images/projects/nature-travel.webp",
+            "/images/projects/nature-travel.png",
         ],
     },
 
@@ -322,7 +322,7 @@ export const projects: Project[] = [
         demo: "https://08-zustand-seven-rust.vercel.app/notes/filter/all",
 
         images: [
-            "/images/projects/note-hub.webp",
+            "/images/projects/note-hub.png",
         ],
     },
 
@@ -389,7 +389,7 @@ export const projects: Project[] = [
         demo: "https://dmytro-liashenko.github.io/project-group-05/",
 
         images: [
-            "/images/projects/joha.webp",
+            "/images/projects/joha.png",
         ],
     },
 
@@ -455,7 +455,7 @@ export const projects: Project[] = [
         demo: "https://dmytro-liashenko.github.io/DreamTeam/",
 
         images: [
-            "/images/projects/furniture.webp",
+            "/images/projects/furniture.png",
         ],
     }
 ];

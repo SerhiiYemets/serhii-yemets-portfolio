@@ -12,3 +12,6 @@ export const navigation: NavItem[] = [
     { key: "pet", href: "/pet-projects" },
     { key: "contact", href: "/contact" },
 ];
+
+
+

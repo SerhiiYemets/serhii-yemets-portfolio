@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import { localeLabels } from "@/i18n/locale";
 import styles from "./LanguageSwitcher.module.css";
 
 interface LanguageSwitcherProps {
@@ -34,7 +35,7 @@ export default function LanguageSwitcher({ className }: LanguageSwitcherProps) {
                         aria-current={isActive ? "true" : undefined}
                         className={clsx(styles.option, isActive && styles.active)}
                     >
-                        {locale.toUpperCase()}
+                        {localeLabels[locale]}
                     </Link>
                 );
             })}

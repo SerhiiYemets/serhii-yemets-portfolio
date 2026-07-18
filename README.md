@@ -1,36 +1,278 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Serhii Yemets — Portfolio
+
+🇬🇧 English | 🇨🇿 Čeština
+
+---
+
+# 🇬🇧 English
+
+## Overview
+
+This repository contains my personal developer portfolio built with **Next.js**, showcasing my commercial, team, and personal projects.
+
+The portfolio highlights my experience as a **Full Stack JavaScript Developer**, including frontend, backend, deployment, and modern web development practices.
+
+## Live Demo
+
+https://serhii-yemets-portfolio.vercel.app/en
+
+---
+
+## Features
+
+- Modern responsive UI
+- Multi-language support (English, Czech, Ukrainian)
+- Commercial, Team and Personal Projects
+- Dynamic project pages
+- SEO optimized
+- Server Side Rendering (SSR)
+- Static Generation (SSG)
+- Optimized images
+- Dark modern design
+- Mobile-first layout
+- Accessibility focused
+
+---
+
+## Tech Stack
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- CSS Modules
+- React Query
+- Zustand
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- REST API
+- JWT Authentication
+
+### Deployment
+
+- Vercel
+- Hetzner VPS
+- PM2
+- Nginx
+- Linux
+
+### Tools
+
+- Git
+- GitHub
+- VS Code
+- Postman
+- Figma
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository
+
+```bash
+git clone <repository-url>
+```
+
+Go to the project directory
+
+```bash
+cd project-name
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Production Build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+app/
+components/
+data/
+hooks/
+lib/
+public/
+types/
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact
+
+**Serhii Yemets**
+
+Full Stack JavaScript Developer
+
+LinkedIn:
+https://www.linkedin.com/in/serhii-yemets/
+
+---
+
+# 🇨🇿 Čeština
+
+## Přehled
+
+Tento repozitář obsahuje moje osobní vývojářské portfolio vytvořené pomocí **Next.js**.
+
+Portfolio představuje moje komerční, týmové i osobní projekty a ukazuje mé zkušenosti jako **Full Stack JavaScript Developer**.
+
+---
+
+## Živá ukázka
+
+https://serhii-yemets-portfolio.vercel.app/cs
+
+---
+
+## Funkce
+
+- Moderní responzivní uživatelské rozhraní
+- Vícejazyčná podpora (angličtina, čeština, ukrajinština)
+- Komerční, týmové a osobní projekty
+- Dynamické stránky projektů
+- SEO optimalizace
+- Server Side Rendering (SSR)
+- Static Site Generation (SSG)
+- Optimalizované obrázky
+- Moderní tmavý design
+- Mobile-first přístup
+- Důraz na přístupnost
+
+---
+
+## Použité technologie
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- CSS Modules
+- React Query
+- Zustand
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- REST API
+- JWT autentizace
+
+### Nasazení
+
+- Vercel
+- Hetzner VPS
+- PM2
+- Nginx
+- Linux
+
+### Nástroje
+
+- Git
+- GitHub
+- VS Code
+- Postman
+- Figma
+
+---
+
+## Spuštění projektu
+
+Naklonujte repozitář
+
+```bash
+git clone <repository-url>
+```
+
+Přejděte do složky projektu
+
+```bash
+cd project-name
+```
+
+Nainstalujte závislosti
+
+```bash
+npm install
+```
+
+Spusťte vývojový server
+
+```bash
+npm run dev
+```
+
+Otevřete
+
+```
+http://localhost:3000
+```
+
+---
+
+## Produkční build
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## Struktura projektu
+
+```
+app/
+components/
+data/
+hooks/
+lib/
+public/
+types/
+```
+
+---
+
+## Kontakt
+
+**Serhii Yemets**
+
+Full Stack JavaScript Developer
+
+LinkedIn:
+https://www.linkedin.com/in/serhii-yemets/
+
+
+

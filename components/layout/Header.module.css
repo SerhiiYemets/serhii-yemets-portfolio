@@ -51,6 +51,12 @@
     opacity: 0.85;
 }
 
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
 .menuButton {
     display: none;
     align-items: center;

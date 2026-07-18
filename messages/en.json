@@ -1,0 +1,183 @@
+{
+    "metadata": {
+        "titleTemplate": "%s | Serhii Yemets",
+        "ogDescription": "Full Stack JavaScript Developer specializing in React, Next.js, Node.js and TypeScript.",
+        "home": {
+            "title": "Serhii Yemets — Full Stack JavaScript Developer",
+            "description": "Full Stack JavaScript Developer specializing in React, Next.js, Node.js and TypeScript. Building scalable, production-ready web applications from idea to deployment."
+        },
+        "about": {
+            "title": "About",
+            "description": "Full Stack JavaScript Developer based in the Czech Republic, specializing in React, Next.js, Node.js and TypeScript."
+        },
+        "contact": {
+            "title": "Contact",
+            "description": "Get in touch with Serhii Yemets — Full Stack JavaScript Developer. Available for freelance work and full-time opportunities."
+        },
+        "commercial": {
+            "title": "Commercial Projects",
+            "description": "Projects developed for real business needs and production environments."
+        },
+        "team": {
+            "title": "Team Projects",
+            "description": "Collaborative projects developed as part of a team."
+        },
+        "pet": {
+            "title": "Pet Projects",
+            "description": "Personal projects created to learn, experiment, and improve my skills."
+        }
+    },
+    "navigation": {
+        "about": "About",
+        "commercial": "Commercial",
+        "team": "Team",
+        "pet": "Pet",
+        "contact": "Contact"
+    },
+    "languageSwitcher": {
+        "label": "Select language",
+        "en": "English",
+        "cs": "Czech",
+        "uk": "Ukrainian"
+    },
+    "hero": {
+        "badge": "Available for work",
+        "role": "Full Stack JavaScript Developer",
+        "greeting": "Hi, I'm",
+        "description": "I build scalable web applications from idea to production using React, Next.js, Node.js and TypeScript.",
+        "viewProjects": "View Projects",
+        "downloadCv": "Download CV",
+        "contactMe": "Contact Me",
+        "card": {
+            "role": "Full Stack Developer",
+            "location": "Czech Republic",
+            "focus": "Production-ready web apps"
+        }
+    },
+    "about": {
+        "section": {
+            "subtitle": "About Me",
+            "title": "Full Stack Developer passionate about building modern web applications.",
+            "moreAboutMe": "More about me",
+            "p1": "Full Stack JavaScript Developer based in the Czech Republic, specializing in React, Next.js, Node.js and TypeScript.",
+            "p2": "I have commercial experience developing production web applications, designing REST APIs, implementing business logic, working with PostgreSQL and MongoDB, and deploying applications using Docker and Linux servers.",
+            "p3": "I enjoy solving complex problems, learning new technologies and creating products that deliver real value to users."
+        },
+        "page": {
+            "eyebrow": "About Me",
+            "title": "Building modern web applications, from idea to production.",
+            "lede": "I'm Serhii Yemets, a Full Stack JavaScript Developer who enjoys turning complex problems into clean, reliable and maintainable products.",
+            "p1": "Full Stack JavaScript Developer based in the Czech Republic, specializing in React, Next.js, Node.js and TypeScript. I build end-to-end web applications with a strong focus on performance, accessibility and clean architecture.",
+            "p2": "I have commercial experience developing production web applications, designing REST APIs, implementing business logic, working with PostgreSQL and MongoDB, and deploying applications using Docker and Linux servers.",
+            "p3": "I care about the details that make software feel polished — thoughtful interactions, consistent design systems and code that other developers enjoy working with. I'm always learning and looking for the next challenge worth solving.",
+            "facts": {
+                "location": "Location",
+                "locationValue": "Czech Republic",
+                "role": "Role",
+                "roleValue": "Full Stack Developer",
+                "focus": "Focus",
+                "focusValue": "Production web apps"
+            },
+            "skillsTitle": "Skills & Tools",
+            "ctaTitle": "Let's work together",
+            "ctaText": "Have a project in mind or an open position? I'd love to hear about it.",
+            "ctaButton": "Get in touch"
+        }
+    },
+    "techStack": {
+        "subtitle": "Tech Stack",
+        "title": "Technologies I Use",
+        "description": "Modern technologies that I use to build scalable, responsive and production-ready web applications.",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "tools": "Tools",
+            "devops": "Deployment & DevOps"
+        }
+    },
+    "featuredProjects": {
+        "subtitle": "Portfolio",
+        "title": "Featured Projects",
+        "description": "A selection of projects that best demonstrate my experience in frontend, backend and full-stack development.",
+        "viewAll": "View All Projects"
+    },
+    "projectCategories": {
+        "commercial": "Commercial",
+        "team": "Team",
+        "pet": "Pet Project"
+    },
+    "projectsPages": {
+        "eyebrow": "Portfolio",
+        "empty": "Projects in this category are coming soon.",
+        "commercial": {
+            "title": "Commercial Projects",
+            "description": "Projects developed for real business needs and production environments.",
+            "back": "Back to Commercial Projects"
+        },
+        "team": {
+            "title": "Team Projects",
+            "description": "Collaborative projects developed as part of a team.",
+            "back": "Back to Team Projects"
+        },
+        "pet": {
+            "title": "Pet Projects",
+            "description": "Personal projects created to learn, experiment, and improve my skills.",
+            "back": "Back to Pet Projects"
+        }
+    },
+    "projectCard": {
+        "viewProject": "View Project",
+        "featured": "Featured"
+    },
+    "projectDetails": {
+        "overview": "Overview",
+        "myContribution": "My Contribution",
+        "responsibilities": "Responsibilities",
+        "businessChallenges": "Business Challenges",
+        "solutions": "Solutions",
+        "infrastructure": "Infrastructure",
+        "achievements": "Achievements",
+        "lessonsLearned": "Lessons Learned",
+        "challenges": "Challenges",
+        "details": "Project Details",
+        "technologies": "Technologies",
+        "links": "Links",
+        "gallery": "Gallery",
+        "role": "Role",
+        "duration": "Duration",
+        "category": "Category",
+        "liveDemo": "Live Demo",
+        "viewCode": "View Code",
+        "githubRepository": "GitHub Repository"
+    },
+    "contact": {
+        "eyebrow": "Contact",
+        "title": "Let's build something together.",
+        "lede": "I'm open to freelance projects and full-time opportunities. Whether you have a question or just want to say hello, my inbox is always open.",
+        "preferEmail": "Prefer email?",
+        "sendEmail": "Send an email",
+        "channels": {
+            "phone": "Phone",
+            "github": "GitHub",
+            "linkedin": "LinkedIn"
+        }
+    },
+    "footer": {
+        "tagline": "Full Stack JavaScript Developer building scalable, production-ready web applications.",
+        "rights": "© {year} Serhii Yemets. All rights reserved.",
+        "navLabel": "Footer"
+    },
+    "common": {
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu",
+        "menuLabel": "Main navigation"
+    },
+    "errors": {
+        "notFound": {
+            "code": "404",
+            "title": "Page not found",
+            "description": "Sorry, the page you're looking for doesn't exist or has been moved.",
+            "backHome": "Back to home"
+        }
+    }
+}

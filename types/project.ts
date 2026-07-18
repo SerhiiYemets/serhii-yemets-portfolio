@@ -1,41 +1,38 @@
-export interface Project {
+export type ProjectCategory = "commercial" | "team" | "pet";
+
+export type ProjectSlug =
+    | "food-delivery"
+    | "relax-map"
+    | "travel-trucks"
+    | "notehub"
+    | "yoga-bloom"
+    | "furniture-store";
+
+export interface ProjectMeta {
     id: string;
-    title: string;
-    slug: string;
-
-    category: "commercial" | "team" | "pet";
-
+    slug: ProjectSlug;
+    category: ProjectCategory;
     featured: boolean;
-
-    shortDescription: string;
-
-    fullDescription: string;
-
-    role: string;
-
-    duration?: string;
-
     technologies: string[];
-
-    contribution: string[];
-
-    responsibilities: string[];
-
-    businessChallenges?: string[];
-
-    solutions?: string[];
-
-    achievements?: string[];
-
     infrastructure?: string[];
-
-    lessonsLearned?: string[];
-
-    challenges?: string[];
-
     github?: string;
-
     demo?: string;
-
     images: string[];
 }
+
+export interface ProjectContent {
+    title: string;
+    shortDescription: string;
+    fullDescription: string;
+    role: string;
+    duration?: string;
+    contribution: string[];
+    responsibilities: string[];
+    businessChallenges?: string[];
+    solutions?: string[];
+    achievements?: string[];
+    lessonsLearned?: string[];
+    challenges?: string[];
+}
+
+export type Project = ProjectMeta & ProjectContent;

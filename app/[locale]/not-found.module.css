@@ -1,0 +1,60 @@
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    padding: clamp(48px, 10vw, 96px) 24px;
+}
+
+.container {
+    max-width: 520px;
+    text-align: center;
+}
+
+.code {
+    color: var(--color-accent);
+    font-size: clamp(56px, 12vw, 88px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.title {
+    margin-top: 16px;
+    color: var(--color-text);
+    font-size: clamp(26px, 4vw, 34px);
+    letter-spacing: -0.02em;
+}
+
+.description {
+    margin-top: 16px;
+    color: var(--color-text-secondary);
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 32px;
+    height: 46px;
+    padding: 0 22px;
+
+    border-radius: var(--radius-md);
+    background: var(--color-accent);
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: var(--shadow-accent);
+
+    transition:
+        transform var(--transition),
+        background var(--transition);
+}
+
+.button:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-2px);
+}

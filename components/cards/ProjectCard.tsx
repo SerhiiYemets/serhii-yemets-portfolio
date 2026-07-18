@@ -1,7 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
+import { Link } from "@/i18n/navigation";
 import { Project } from "@/types/project";
 import styles from "./ProjectCard.module.css";
 
@@ -9,18 +10,14 @@ interface ProjectCardProps {
     project: Project;
 }
 
-const categoryLabels: Record<Project["category"], string> = {
-    commercial: "Commercial",
-    team: "Team",
-    pet: "Pet Project",
-};
-
 export default function ProjectCard({ project }: ProjectCardProps) {
+    const t = useTranslations();
+
     return (
         <Link
             href={`/projects/${project.slug}`}
             className={styles.card}
-            aria-label={`View project: ${project.title}`}
+            aria-label={`${t("projectCard.viewProject")}: ${project.title}`}
         >
             <div className={styles.imageWrap}>
                 <Image
@@ -34,11 +31,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
                 <div className={styles.badges}>
                     <span className={styles.category}>
-                        {categoryLabels[project.category]}
+                        {t(`projectCategories.${project.category}`)}
                     </span>
 
                     {project.featured && (
-                        <span className={styles.featured}>Featured</span>
+                        <span className={styles.featured}>
+                            {t("projectCard.featured")}
+                        </span>
                     )}
                 </div>
             </div>
@@ -71,7 +70,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 </div>
 
                 <span className={styles.cta}>
-                    View Project
+                    {t("projectCard.viewProject")}
                     <ArrowUpRight size={17} />
                 </span>
             </div>

@@ -1,0 +1,183 @@
+{
+    "metadata": {
+        "titleTemplate": "%s | Serhii Yemets",
+        "ogDescription": "Full Stack JavaScript vývojář se specializací na React, Next.js, Node.js a TypeScript.",
+        "home": {
+            "title": "Serhii Yemets — Full Stack JavaScript vývojář",
+            "description": "Full Stack JavaScript vývojář se specializací na React, Next.js, Node.js a TypeScript. Tvořím škálovatelné a produkčně připravené webové aplikace od nápadu po nasazení."
+        },
+        "about": {
+            "title": "O mně",
+            "description": "Full Stack JavaScript vývojář se sídlem v České republice, se specializací na React, Next.js, Node.js a TypeScript."
+        },
+        "contact": {
+            "title": "Kontakt",
+            "description": "Spojte se se Serhiiem Yemetsem — Full Stack JavaScript vývojářem. K dispozici pro freelance i práci na plný úvazek."
+        },
+        "commercial": {
+            "title": "Komerční projekty",
+            "description": "Projekty vyvinuté pro reálné byznysové potřeby a produkční prostředí."
+        },
+        "team": {
+            "title": "Týmové projekty",
+            "description": "Společné projekty vyvinuté jako součást týmu."
+        },
+        "pet": {
+            "title": "Osobní projekty",
+            "description": "Osobní projekty vytvořené pro učení, experimentování a zdokonalování mých dovedností."
+        }
+    },
+    "navigation": {
+        "about": "O mně",
+        "commercial": "Komerční",
+        "team": "Týmové",
+        "pet": "Osobní",
+        "contact": "Kontakt"
+    },
+    "languageSwitcher": {
+        "label": "Vyberte jazyk",
+        "en": "Angličtina",
+        "cs": "Čeština",
+        "uk": "Ukrajinština"
+    },
+    "hero": {
+        "badge": "K dispozici pro práci",
+        "role": "Full Stack JavaScript vývojář",
+        "greeting": "Ahoj, jsem",
+        "description": "Tvořím škálovatelné webové aplikace od nápadu po produkci pomocí React, Next.js, Node.js a TypeScript.",
+        "viewProjects": "Zobrazit projekty",
+        "downloadCv": "Stáhnout CV",
+        "contactMe": "Kontaktujte mě",
+        "card": {
+            "role": "Full Stack vývojář",
+            "location": "Česká republika",
+            "focus": "Produkčně připravené webové aplikace"
+        }
+    },
+    "about": {
+        "section": {
+            "subtitle": "O mně",
+            "title": "Full Stack vývojář, kterého baví tvořit moderní webové aplikace.",
+            "moreAboutMe": "Více o mně",
+            "p1": "Full Stack JavaScript vývojář se sídlem v České republice, se specializací na React, Next.js, Node.js a TypeScript.",
+            "p2": "Mám komerční zkušenosti s vývojem produkčních webových aplikací, návrhem REST API, implementací byznysové logiky, prací s PostgreSQL a MongoDB a nasazováním aplikací pomocí Dockeru a linuxových serverů.",
+            "p3": "Baví mě řešit složité problémy, učit se nové technologie a vytvářet produkty, které uživatelům přinášejí reálnou hodnotu."
+        },
+        "page": {
+            "eyebrow": "O mně",
+            "title": "Tvorba moderních webových aplikací, od nápadu po produkci.",
+            "lede": "Jsem Serhii Yemets, Full Stack JavaScript vývojář, kterého baví měnit složité problémy v čistá, spolehlivá a udržovatelná řešení.",
+            "p1": "Full Stack JavaScript vývojář se sídlem v České republice, se specializací na React, Next.js, Node.js a TypeScript. Tvořím kompletní webové aplikace s důrazem na výkon, přístupnost a čistou architekturu.",
+            "p2": "Mám komerční zkušenosti s vývojem produkčních webových aplikací, návrhem REST API, implementací byznysové logiky, prací s PostgreSQL a MongoDB a nasazováním aplikací pomocí Dockeru a linuxových serverů.",
+            "p3": "Záleží mi na detailech, díky nimž software působí precizně — promyšlené interakce, konzistentní design systémy a kód, se kterým se ostatním vývojářům dobře pracuje. Neustále se učím a hledám další výzvu, kterou stojí za to vyřešit.",
+            "facts": {
+                "location": "Lokalita",
+                "locationValue": "Česká republika",
+                "role": "Role",
+                "roleValue": "Full Stack vývojář",
+                "focus": "Zaměření",
+                "focusValue": "Produkční webové aplikace"
+            },
+            "skillsTitle": "Dovednosti a nástroje",
+            "ctaTitle": "Pojďme spolupracovat",
+            "ctaText": "Máte v hlavě projekt nebo volnou pozici? Rád si o tom poslechnu.",
+            "ctaButton": "Ozvěte se"
+        }
+    },
+    "techStack": {
+        "subtitle": "Tech Stack",
+        "title": "Technologie, které používám",
+        "description": "Moderní technologie, které používám k tvorbě škálovatelných, responzivních a produkčně připravených webových aplikací.",
+        "categories": {
+            "frontend": "Frontend",
+            "backend": "Backend",
+            "tools": "Nástroje",
+            "devops": "Nasazení a DevOps"
+        }
+    },
+    "featuredProjects": {
+        "subtitle": "Portfolio",
+        "title": "Vybrané projekty",
+        "description": "Výběr projektů, které nejlépe ukazují mé zkušenosti s frontendem, backendem a full-stack vývojem.",
+        "viewAll": "Zobrazit všechny projekty"
+    },
+    "projectCategories": {
+        "commercial": "Komerční",
+        "team": "Týmový",
+        "pet": "Osobní projekt"
+    },
+    "projectsPages": {
+        "eyebrow": "Portfolio",
+        "empty": "Projekty v této kategorii se brzy objeví.",
+        "commercial": {
+            "title": "Komerční projekty",
+            "description": "Projekty vyvinuté pro reálné byznysové potřeby a produkční prostředí.",
+            "back": "Zpět na komerční projekty"
+        },
+        "team": {
+            "title": "Týmové projekty",
+            "description": "Společné projekty vyvinuté jako součást týmu.",
+            "back": "Zpět na týmové projekty"
+        },
+        "pet": {
+            "title": "Osobní projekty",
+            "description": "Osobní projekty vytvořené pro učení, experimentování a zdokonalování mých dovedností.",
+            "back": "Zpět na osobní projekty"
+        }
+    },
+    "projectCard": {
+        "viewProject": "Zobrazit projekt",
+        "featured": "Vybraný"
+    },
+    "projectDetails": {
+        "overview": "Přehled",
+        "myContribution": "Můj přínos",
+        "responsibilities": "Zodpovědnosti",
+        "businessChallenges": "Byznysové výzvy",
+        "solutions": "Řešení",
+        "infrastructure": "Infrastruktura",
+        "achievements": "Úspěchy",
+        "lessonsLearned": "Co jsem se naučil",
+        "challenges": "Výzvy",
+        "details": "Detaily projektu",
+        "technologies": "Technologie",
+        "links": "Odkazy",
+        "gallery": "Galerie",
+        "role": "Role",
+        "duration": "Doba trvání",
+        "category": "Kategorie",
+        "liveDemo": "Živé demo",
+        "viewCode": "Zobrazit kód",
+        "githubRepository": "GitHub repozitář"
+    },
+    "contact": {
+        "eyebrow": "Kontakt",
+        "title": "Pojďme společně něco vytvořit.",
+        "lede": "Jsem otevřený freelance projektům i práci na plný úvazek. Ať už máte dotaz, nebo jen chcete pozdravit, moje schránka je vždy otevřená.",
+        "preferEmail": "Preferujete e-mail?",
+        "sendEmail": "Odeslat e-mail",
+        "channels": {
+            "phone": "Telefon",
+            "github": "GitHub",
+            "linkedin": "LinkedIn"
+        }
+    },
+    "footer": {
+        "tagline": "Full Stack JavaScript vývojář, který tvoří škálovatelné a produkčně připravené webové aplikace.",
+        "rights": "© {year} Serhii Yemets. Všechna práva vyhrazena.",
+        "navLabel": "Patička"
+    },
+    "common": {
+        "openMenu": "Otevřít menu",
+        "closeMenu": "Zavřít menu",
+        "menuLabel": "Hlavní navigace"
+    },
+    "errors": {
+        "notFound": {
+            "code": "404",
+            "title": "Stránka nenalezena",
+            "description": "Omlouváme se, stránka, kterou hledáte, neexistuje nebo byla přesunuta.",
+            "backHome": "Zpět na hlavní stránku"
+        }
+    }
+}

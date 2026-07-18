@@ -1,9 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
-import { ArrowRight, Download, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
+import { useTranslations } from "next-intl";
 
+import { Link } from "@/i18n/navigation";
 import styles from "./Hero.module.css";
 
 const stack = [
@@ -24,6 +25,7 @@ const highlights = ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL"];
 
 export default function Hero() {
     const prefersReducedMotion = useReducedMotion();
+    const t = useTranslations("hero");
 
     const container: Variants = {
         hidden: {},
@@ -58,36 +60,30 @@ export default function Hero() {
                 >
                     <motion.p className={styles.badge} variants={item}>
                         <span className={styles.dot} />
-                        Available for work
+                        {t("badge")}
                     </motion.p>
 
                     <motion.p className={styles.label} variants={item}>
-                        Full Stack JavaScript Developer
+                        {t("role")}
                     </motion.p>
 
                     <motion.h1 className={styles.title} variants={item}>
-                        Hi, I&apos;m <span>Serhii Yemets</span>
+                        {t("greeting")} <span>Serhii Yemets</span>
                     </motion.h1>
 
                     <motion.p className={styles.description} variants={item}>
-                        I build scalable web applications from idea to production using
-                        React, Next.js, Node.js and TypeScript.
+                        {t("description")}
                     </motion.p>
 
                     <motion.div className={styles.actions} variants={item}>
                         <Link href="/team-projects" className={styles.primaryButton}>
-                            View Projects
+                            {t("viewProjects")}
                             <ArrowRight size={18} />
                         </Link>
 
-                        {/* <a href="/cv.pdf" download className={styles.secondaryButton}>
-                            <Download size={18} />
-                            Download CV
-                        </a> */}
-
                         <Link href="/contact" className={styles.ghostButton}>
                             <Mail size={18} />
-                            Contact Me
+                            {t("contactMe")}
                         </Link>
                     </motion.div>
 
@@ -120,12 +116,12 @@ export default function Hero() {
                     <pre className={styles.code}>
                         <code>{`const developer = {
   name: "Serhii Yemets",
-  role: "Full Stack Developer",
-  location: "Czech Republic",
+  role: "${t("card.role")}",
+  location: "${t("card.location")}",
   stack: [
-${stack.map((item) => `    "${item}"`).join(",\n")}
+${stack.map((entry) => `    "${entry}"`).join(",\n")}
   ],
-  focus: "Production-ready web apps",
+  focus: "${t("card.focus")}",
 };`}</code>
                     </pre>
                 </motion.div>

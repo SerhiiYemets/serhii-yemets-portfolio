@@ -1,26 +1,26 @@
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 
-import { projects } from "@/data/projects";
+import { Link } from "@/i18n/navigation";
+import { getFeaturedProjects } from "@/lib/projects";
 import ProjectCard from "@/components/cards/ProjectCard";
 import Reveal from "@/components/ui/Reveal";
 import styles from "./FeaturedProjects.module.css";
 
 export default function FeaturedProjects() {
-    const featuredProjects = projects.filter((project) => project.featured);
+    const locale = useLocale();
+    const t = useTranslations("featuredProjects");
+    const featuredProjects = getFeaturedProjects(locale);
 
     return (
         <section className={styles.section}>
             <div className={styles.container}>
                 <Reveal className={styles.header}>
-                    <p className={styles.subtitle}>Portfolio</p>
+                    <p className={styles.subtitle}>{t("subtitle")}</p>
 
-                    <h2 className={styles.title}>Featured Projects</h2>
+                    <h2 className={styles.title}>{t("title")}</h2>
 
-                    <p className={styles.description}>
-                        A selection of projects that best demonstrate my experience in
-                        frontend, backend and full-stack development.
-                    </p>
+                    <p className={styles.description}>{t("description")}</p>
                 </Reveal>
 
                 <div className={styles.grid}>
@@ -37,7 +37,7 @@ export default function FeaturedProjects() {
 
                 <div className={styles.actions}>
                     <Link href="/commercial-projects" className={styles.button}>
-                        View All Projects
+                        {t("viewAll")}
                         <ArrowRight size={18} />
                     </Link>
                 </div>

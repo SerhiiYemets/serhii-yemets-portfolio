@@ -1,28 +1,27 @@
-import { Project } from "@/types/project";
+import { useTranslations } from "next-intl";
+
+import type { Project, ProjectCategory } from "@/types/project";
 import ProjectCard from "@/components/cards/ProjectCard";
 import Reveal from "@/components/ui/Reveal";
 import styles from "./ProjectsList.module.css";
 
 interface ProjectsListProps {
-    title: string;
-    description: string;
+    category: ProjectCategory;
     projects: Project[];
 }
 
-export default function ProjectsList({
-    title,
-    description,
-    projects,
-}: ProjectsListProps) {
+export default function ProjectsList({ category, projects }: ProjectsListProps) {
+    const t = useTranslations("projectsPages");
+
     return (
         <section className={styles.section}>
             <div className={styles.container}>
                 <Reveal className={styles.header}>
-                    <p className={styles.eyebrow}>Portfolio</p>
+                    <p className={styles.eyebrow}>{t("eyebrow")}</p>
 
-                    <h1 className={styles.title}>{title}</h1>
+                    <h1 className={styles.title}>{t(`${category}.title`)}</h1>
 
-                    <p className={styles.description}>{description}</p>
+                    <p className={styles.description}>{t(`${category}.description`)}</p>
                 </Reveal>
 
                 {projects.length > 0 ? (
@@ -38,9 +37,7 @@ export default function ProjectsList({
                         ))}
                     </div>
                 ) : (
-                    <p className={styles.empty}>
-                        Projects in this category are coming soon.
-                    </p>
+                    <p className={styles.empty}>{t("empty")}</p>
                 )}
             </div>
         </section>

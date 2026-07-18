@@ -1,17 +1,19 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
+import { useTranslations } from "next-intl";
 
+import { Link, usePathname } from "@/i18n/navigation";
 import { navigation } from "@/constants/navigation";
 import Navigation from "./Navigation";
+import LanguageSwitcher from "./LanguageSwitcher";
 import styles from "./Header.module.css";
 
 export default function Header() {
     const pathname = usePathname();
+    const t = useTranslations();
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -41,24 +43,28 @@ export default function Header() {
 
                 <Navigation />
 
-                <button
-                    type="button"
-                    className={styles.menuButton}
-                    aria-label={menuOpen ? "Close menu" : "Open menu"}
-                    aria-expanded={menuOpen}
-                    onClick={() => setMenuOpen((open) => !open)}
-                >
-                    {menuOpen ? <X size={22} /> : <Menu size={22} />}
-                </button>
+                <div className={styles.actions}>
+                    <LanguageSwitcher className={styles.switcher} />
+
+                    <button
+                        type="button"
+                        className={styles.menuButton}
+                        aria-label={menuOpen ? t("common.closeMenu") : t("common.openMenu")}
+                        aria-expanded={menuOpen}
+                        onClick={() => setMenuOpen((open) => !open)}
+                    >
+                        {menuOpen ? <X size={22} /> : <Menu size={22} />}
+                    </button>
+                </div>
             </div>
 
             <div
                 className={clsx(styles.mobileMenu, menuOpen && styles.mobileMenuOpen)}
                 hidden={!menuOpen}
             >
-                <nav>
+                <nav aria-label={t("common.menuLabel")}>
                     <ul className={styles.mobileList}>
-                        {navigation.map(({ title, href }) => (
+                        {navigation.map(({ key, href }) => (
                             <li key={href}>
                                 <Link
                                     href={href}
@@ -68,7 +74,7 @@ export default function Header() {
                                         pathname === href && styles.mobileLinkActive
                                     )}
                                 >
-                                    {title}
+                                    {t(`navigation.${key}`)}
                                 </Link>
                             </li>
                         ))}

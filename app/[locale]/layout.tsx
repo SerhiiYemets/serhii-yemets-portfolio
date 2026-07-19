@@ -48,16 +48,26 @@ export async function generateMetadata({
         authors: [{ name: "Serhii Yemets" }],
         creator: "Serhii Yemets",
         openGraph: {
-            type: "website",
-            locale: getOpenGraphLocale(locale),
-            title: t("home.title"),
-            description: t("ogDescription"),
-            siteName: "Serhii Yemets",
+        type: "website",
+        url: `https://serhiiyemets.com/${locale}`,
+        locale: getOpenGraphLocale(locale),
+        title: t("home.title"),
+        description: t("ogDescription"),
+        siteName: "Serhii Yemets",
+            images: [
+                {
+                    url: "/og-image.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "Serhii Yemets Portfolio",
+                },
+            ],
         },
         twitter: {
             card: "summary_large_image",
             title: t("home.title"),
             description: t("ogDescription"),
+            images: ["/og-image.png"],
         },
         robots: {
             index: true,

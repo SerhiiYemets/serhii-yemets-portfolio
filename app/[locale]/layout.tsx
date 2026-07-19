@@ -9,6 +9,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "../globals.css";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 interface LocaleLayoutProps {
     children: React.ReactNode;
     params: Promise<{ locale: string }>;
@@ -27,7 +29,7 @@ export async function generateMetadata({
     const t = await getTranslations({ locale, namespace: "metadata" });
 
     return {
-        metadataBase: new URL("https://serhii-yemets.dev"),
+        metadataBase: new URL("https://serhiiyemets.com"),
         title: {
             default: t("home.title"),
             template: t("titleTemplate"),
@@ -81,6 +83,8 @@ export default async function LocaleLayout({
                     <main>{children}</main>
                     <Footer />
                 </NextIntlClientProvider>
+
+                <GoogleAnalytics gaId="G-M89V1BCGE6" />
             </body>
         </html>
     );

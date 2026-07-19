@@ -29,9 +29,9 @@
     },
     "navigation": {
         "about": "O mně",
-        "commercial": "Komerční",
-        "team": "Týmové",
-        "pet": "Osobní",
+        "commercial": "Komerční projekty",
+        "team": "Týmové projekty",
+        "pet": "Osobní projekty",
         "contact": "Kontakt"
     },
     "languageSwitcher": {

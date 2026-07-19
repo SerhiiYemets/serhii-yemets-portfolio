@@ -29,9 +29,9 @@
     },
     "navigation": {
         "about": "About",
-        "commercial": "Commercial",
-        "team": "Team",
-        "pet": "Pet",
+        "commercial": "Commercial Projects",
+        "team": "Team Projects",
+        "pet": "Pet Projects",
         "contact": "Contact"
     },
     "languageSwitcher": {

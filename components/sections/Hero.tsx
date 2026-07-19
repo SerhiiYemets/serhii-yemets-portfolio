@@ -21,7 +21,8 @@ const stack = [
     "Docker",
 ];
 
-const highlights = ["React", "Next.js", "Node.js", "TypeScript", "PostgreSQL"];
+const highlights = ["JavaScript", "React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "MongoDB",
+    "Docker",];
 
 export default function Hero() {
     const prefersReducedMotion = useReducedMotion();

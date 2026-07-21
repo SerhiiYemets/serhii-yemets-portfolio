@@ -7,6 +7,7 @@ import { buildAlternates } from "@/i18n/metadata";
 import { socialLinks } from "@/data/socialLinks";
 import { GitHubIcon, LinkedInIcon } from "@/components/ui/icons";
 import Reveal from "@/components/ui/Reveal";
+import TrackedLink from "@/components/analytics/TrackedLink";
 import styles from "./page.module.css";
 
 interface PageProps {
@@ -41,6 +42,7 @@ export default async function ContactPage({ params }: PageProps) {
             href: `tel:${socialLinks.phone}`,
             Icon: Phone,
             external: false,
+            event: undefined,
         },
         {
             label: t("channels.github"),
@@ -48,6 +50,7 @@ export default async function ContactPage({ params }: PageProps) {
             href: socialLinks.github,
             Icon: GitHubIcon,
             external: true,
+            event: "github_click",
         },
         {
             label: t("channels.linkedin"),
@@ -55,6 +58,7 @@ export default async function ContactPage({ params }: PageProps) {
             href: socialLinks.linkedin,
             Icon: LinkedInIcon,
             external: true,
+            event: "linkedin_click",
         },
     ];
 
@@ -72,29 +76,35 @@ export default async function ContactPage({ params }: PageProps) {
                 <Reveal className={styles.emailCard} delay={0.05}>
                     <div>
                         <p className={styles.emailLabel}>{t("preferEmail")}</p>
-                        <a
+                        <TrackedLink
                             href={`mailto:${socialLinks.email}`}
+                            event="email_click"
                             className={styles.emailValue}
                         >
                             {socialLinks.email}
-                        </a>
+                        </TrackedLink>
                     </div>
 
-                    <a href={`mailto:${socialLinks.email}`} className={styles.emailButton}>
+                    <TrackedLink
+                        href={`mailto:${socialLinks.email}`}
+                        event="email_click"
+                        className={styles.emailButton}
+                    >
                         <Mail size={18} />
                         {t("sendEmail")}
-                    </a>
+                    </TrackedLink>
                 </Reveal>
 
                 <div className={styles.channels}>
-                    {channels.map(({ label, value, href, Icon, external }, index) => (
+                    {channels.map(({ label, value, href, Icon, external, event }, index) => (
                         <Reveal
                             key={label}
                             className={styles.channelWrap}
                             delay={index * 0.08}
                         >
-                            <a
+                            <TrackedLink
                                 href={href}
+                                event={event}
                                 className={styles.channel}
                                 {...(external
                                     ? { target: "_blank", rel: "noopener noreferrer" }
@@ -110,7 +120,7 @@ export default async function ContactPage({ params }: PageProps) {
                                 </span>
 
                                 <ArrowUpRight size={18} className={styles.channelArrow} />
-                            </a>
+                            </TrackedLink>
                         </Reveal>
                     ))}
                 </div>

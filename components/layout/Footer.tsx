@@ -5,12 +5,13 @@ import { Link } from "@/i18n/navigation";
 import { navigation } from "@/constants/navigation";
 import { socialLinks } from "@/data/socialLinks";
 import { GitHubIcon, LinkedInIcon } from "@/components/ui/icons";
+import TrackedLink from "@/components/analytics/TrackedLink";
 import styles from "./Footer.module.css";
 
 const socials = [
-    { label: "GitHub", href: socialLinks.github, Icon: GitHubIcon },
-    { label: "LinkedIn", href: socialLinks.linkedin, Icon: LinkedInIcon },
-    { label: "Email", href: `mailto:${socialLinks.email}`, Icon: Mail },
+    { label: "GitHub", href: socialLinks.github, Icon: GitHubIcon, event: "github_click" },
+    { label: "LinkedIn", href: socialLinks.linkedin, Icon: LinkedInIcon, event: "linkedin_click" },
+    { label: "Email", href: `mailto:${socialLinks.email}`, Icon: Mail, event: "email_click" },
 ];
 
 export default function Footer() {
@@ -42,17 +43,18 @@ export default function Footer() {
                     <p className={styles.copy}>{t("footer.rights", { year })}</p>
 
                     <div className={styles.socials}>
-                        {socials.map(({ label, href, Icon }) => (
-                            <a
+                        {socials.map(({ label, href, Icon, event }) => (
+                            <TrackedLink
                                 key={label}
                                 href={href}
+                                event={event}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label={label}
                                 className={styles.social}
                             >
                                 <Icon size={18} />
-                            </a>
+                            </TrackedLink>
                         ))}
                     </div>
                 </div>

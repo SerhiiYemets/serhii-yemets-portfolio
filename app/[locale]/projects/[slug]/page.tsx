@@ -13,6 +13,8 @@ import { getLocalizedProject } from "@/lib/projects";
 import type { ProjectCategory } from "@/types/project";
 import Reveal from "@/components/ui/Reveal";
 import { GitHubIcon } from "@/components/ui/icons";
+import TrackedLink from "@/components/analytics/TrackedLink";
+import TrackProjectView from "@/components/analytics/TrackProjectView";
 import styles from "./ProjectPage.module.css";
 
 interface ProjectPageProps {
@@ -78,6 +80,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
     return (
         <article className={styles.page}>
+            <TrackProjectView project={project.title} />
+
             <div className={styles.container}>
                 <Link
                     href={categoryHrefs[project.category]}
@@ -97,27 +101,31 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     {hasLinks && (
                         <div className={styles.headerActions}>
                             {project.demo && (
-                                <a
+                                <TrackedLink
                                     href={project.demo}
+                                    event="demo_click"
+                                    eventParams={{ project: project.title }}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className={styles.primaryLink}
                                 >
                                     <ExternalLink size={17} />
                                     {t("liveDemo")}
-                                </a>
+                                </TrackedLink>
                             )}
 
                             {project.github && (
-                                <a
+                                <TrackedLink
                                     href={project.github}
+                                    event="project_github_click"
+                                    eventParams={{ project: project.title }}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className={styles.secondaryLink}
                                 >
                                     <GitHubIcon size={17} />
                                     {t("viewCode")}
-                                </a>
+                                </TrackedLink>
                             )}
                         </div>
                     )}
@@ -292,8 +300,10 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                                 <h3 className={styles.cardTitle}>{t("links")}</h3>
                                 <div className={styles.cardLinks}>
                                     {project.demo && (
-                                        <a
+                                        <TrackedLink
                                             href={project.demo}
+                                            event="demo_click"
+                                            eventParams={{ project: project.title }}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className={styles.cardLink}
@@ -304,12 +314,14 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                                                 size={15}
                                                 className={styles.linkArrow}
                                             />
-                                        </a>
+                                        </TrackedLink>
                                     )}
 
                                     {project.github && (
-                                        <a
+                                        <TrackedLink
                                             href={project.github}
+                                            event="project_github_click"
+                                            eventParams={{ project: project.title }}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className={styles.cardLink}
@@ -320,7 +332,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                                                 size={15}
                                                 className={styles.linkArrow}
                                             />
-                                        </a>
+                                        </TrackedLink>
                                     )}
                                 </div>
                             </div>

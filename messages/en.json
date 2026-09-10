@@ -54,6 +54,13 @@
             "focus": "Production-ready web apps"
         }
     },
+    "videoIntro": {
+        "subtitle": "Video introduction",
+        "title": "Meet me in 1 minute",
+        "play": "Play introduction video",
+        "close": "Close video",
+        "alt": "Video introduction by Serhii Yemets"
+    },
     "about": {
         "section": {
             "subtitle": "About Me",

@@ -54,6 +54,13 @@
             "focus": "Produkčně připravené webové aplikace"
         }
     },
+    "videoIntro": {
+        "subtitle": "Video o mně",
+        "title": "Poznejte mě za 1 minutu",
+        "play": "Přehrát úvodní video",
+        "close": "Zavřít video",
+        "alt": "Video představení — Serhii Yemets"
+    },
     "about": {
         "section": {
             "subtitle": "O mně",

@@ -130,4 +130,22 @@ export const projectsMeta: ProjectMeta[] = [
         demo: "https://dmytro-liashenko.github.io/DreamTeam/",
         images: ["/images/projects/furniture.png"],
     },
+    {
+        id: "7",
+        slug: "fashion-ecommerce",
+        category: "pet",
+        featured: true,
+        technologies: [
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Shopify Storefront API",
+            "GraphQL",
+            "Shopify Checkout",
+        ],
+        github: "https://github.com/SerhiiYemets/fashion-ecommerce-nextjs-shopify",
+        demo: "https://fashion-ecommerce-nextjs-shopify.vercel.app/",
+        images: ["/images/projects/fashion-ecommerce.png"],
+    },
 ];

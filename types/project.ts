@@ -6,7 +6,8 @@ export type ProjectSlug =
     | "travel-trucks"
     | "notehub"
     | "yoga-bloom"
-    | "furniture-store";
+    | "furniture-store"
+    | "fashion-ecommerce";
 
 export interface ProjectMeta {
     id: string;

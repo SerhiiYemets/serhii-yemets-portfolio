@@ -19,10 +19,16 @@ const stack = [
     "PostgreSQL",
     "MongoDB",
     "Docker",
+    "Tailwind CSS",
+    "GraphQL",
+    "Shopify Storefront API",
+    "Terraform",
+    "AWS EC2",
+    "AWS S3",
 ];
 
 const highlights = ["JavaScript", "React", "Next.js", "Node.js", "TypeScript", "PostgreSQL", "MongoDB",
-    "Docker",];
+    "Docker", "Tailwind CSS", "GraphQL",];
 
 export default function Hero() {
     const prefersReducedMotion = useReducedMotion();

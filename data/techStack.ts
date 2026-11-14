@@ -19,6 +19,7 @@ export const techStack: TechCategory[] = [
             "Context API",
             "CSS Modules",
             "Responsive Design",
+            "Tailwind CSS",
         ],
     },
     {
@@ -32,6 +33,9 @@ export const techStack: TechCategory[] = [
             "JWT",
             "OpenStreetMap",
             "GeoJSON",
+            "GraphQL",
+            "Shopify Storefront API",
+            "PostgreSQL",
         ],
     },
     {
@@ -62,6 +66,15 @@ export const techStack: TechCategory[] = [
             "MongoDB Atlas",
             "Environment Variables",
             "DNS",
+            "Docker",
+            "Nginx",
+            "Terraform",
+            "Infrastructure as Code (IaC)",
+            "AWS EC2",
+            "AWS S3",
+            "AWS VPC",
+            "AWS CLI",
+            "DynamoDB",
         ],
     },
 ];
